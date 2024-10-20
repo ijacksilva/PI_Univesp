@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Nuvem de Sabor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="custom-navbar" style="background-color: aliceblue;">
+        <div class="container-fluid mx-auto">
+            <a class="navbar-brand" href="#">Compra de Bolo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav justify-content-left">
+                    <li class="nav-item-buy">
+                        <a style="text-decoration: none; color: black; font-weight: bold;" aria-current="page" href="index.html">Voltar para a página inicial</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Detalhes do Pedido</h1>
+        <div id="pedido-detalhes" class="mb-4">
+            <!-- Os detalhes do pedido serão inseridos aqui pelo JavaScript -->
+        </div>
+
+        <h2>Informações de Pagamento</h2>
+        <form id="form-pagamento">
+            <div class="mb-3">
+                <label for="metodo-pagamento" class="form-label">Método de Pagamento</label>
+                <select class="form-select" id="metodo-pagamento" required>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="pix">PIX</option>
+                </select>
+            </div>
+
+            <div id="pagamento-cartao" style="display: none;">
+                <div class="mb-3">
+                    <label for="nome-completo" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome-completo">
+                </div>
+                <div class="mb-3">
+                    <label for="numero-cartao" class="form-label">Número do Cartão</label>
+                    <input type="text" class="form-control" id="numero-cartao">
+                </div>
+                <div class="mb-3">
+                    <label for="data-validade" class="form-label">Data de Validade</label>
+                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA">
+                </div>
+                <div class="mb-3">
+                    <label for="codigo-cvv" class="form-label">Código CVV</label>
+                    <input type="text" class="form-control" id="codigo-cvv">
+                </div>
+            </div>
+
+            <div id="pagamento-pix" style="display: none;">
+                <div class="mb-3">
+                   <img src="imagens/icons8-código-qr-64.png" style="width: 100px;">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Finalizar Compra</button>
+            <a class="btn btn-danger" href="index.html">Cancelar Compra</a>
+
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recupera os dados do localStorage
+            var itemName = localStorage.getItem('itemName');
+            var itemPrice = localStorage.getItem('itemPrice');
+
+            // Verifica se os dados estão presentes
+            if (itemName && itemPrice) {
+                // Exibe os detalhes do pedido
+                var pedidoDetalhes = document.getElementById('pedido-detalhes');
+                pedidoDetalhes.innerHTML = `
+                    <h2>${itemName}</h2>
+                    <p>Preço: ${itemPrice}</p>
+                `;
+            } else {
+                // Redireciona de volta se os dados não estiverem presentes
+                window.location.href = 'comprar.html';
+            }
+
+            // Seleciona os elementos do DOM
+            var metodoPagamento = document.getElementById('metodo-pagamento');
+            var pagamentoCartao = document.getElementById('pagamento-cartao');
+            var pagamentoPix = document.getElementById('pagamento-pix');
+
+            // Adiciona evento para mostrar/esconder os campos de pagamento
+            metodoPagamento.addEventListener('change', function() {
+                if (metodoPagamento.value === 'cartao') {
+                    pagamentoCartao.style.display = 'block';
+                    pagamentoPix.style.display = 'none';
+                } else if (metodoPagamento.value === 'pix') {
+                    pagamentoCartao.style.display = 'none';
+                    pagamentoPix.style.display = 'block';
+                }
+            });
+
+            // Define o valor inicial dos campos de pagamento
+            metodoPagamento.dispatchEvent(new Event('change'));
+
+            // Adiciona evento ao formulário de pagamento
+            var formPagamento = document.getElementById('form-pagamento');
+            formPagamento.addEventListener('submit', function(event) {
+                event.preventDefault(); // Previne o envio do formulário
+
+                // Aqui você pode adicionar a lógica de processamento de pagamento
+                alert('Compra finalizada com sucesso!');
+
+                // Limpa o localStorage
+                localStorage.clear();
+
+                // Redireciona para a página inicial
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

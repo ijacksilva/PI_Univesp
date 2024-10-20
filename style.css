@@ -1,0 +1,203 @@
+body {
+    background-color: #FFFACD; /* Altere para a cor que você preferir */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+}
+
+.navbar-nav .nav-link {
+    color: black; /* Define a cor do texto como preto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+}
+.nav-link-buy .nav-link-buy {
+    color: black; /* Define a cor do texto como preto */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    text-decoration: none;
+}
+#custom-navbar {
+    background: linear-gradient(to right, #FADADD 50%, #FFFACD 5%);
+}
+
+.vertical-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 610px; /* Altere a largura conforme necessário */
+    height: 100%;
+    background-color: #FFFACD; /* Cor Amarelo creme */
+    top: 56px;
+
+}
+
+#bolo {
+    transform: scale(1.3);
+    margin-top: 10%;
+    margin-left: -2%;
+}
+
+
+.btn-lilas {
+    background-color: #b13fd7ec; /* Cor lilás */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem externa */
+}
+
+.btn-branco {
+    background-color: white; /* Cor branca */
+    color: black; /* Cor do texto */
+    border: 1px solid black; /* Borda sólida preta */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem externa */
+}
+
+#texto {
+    color: black;
+    text-shadow: bold;
+    padding: 12px;
+}
+
+.box-sobreNos{
+    background-color: #fff;
+    top: 20%;
+    margin-left: 12%;
+    position: relative;
+    width: 450px;
+    height: 190px;
+    z-index: 2;
+    border-radius: 20px;
+    border: 2px solid #b13fd7ec;
+
+}
+.box-sobreNos-right{
+    top: 5%;
+    z-index: 3;
+    position: relative;
+}
+#botoes {
+    display: flex;
+    justify-content: left;
+    margin-top: 80px;
+    margin-left: 200px;
+}
+
+
+/*##########################*/
+
+
+        #sacola {
+            margin-left: 0ch center;
+            max-width: 50%;
+            height: auto;
+        }
+        h1 {
+            font-weight: bold;
+            color: #333;
+        }
+
+
+
+        /*##########################*/
+
+   
+      
+      
+
+        .form-container {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-left: 400px;
+            margin-top: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+       #botaoFormulario {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #botaoFormulario:hover {
+            background-color: #039a5d;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+          }
+          
+          section.bolos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+          }
+          
+          .card-bolo {
+            width: 300px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+          }
+          
+          .card-bolo:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+          
+          .img-bolo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+          }
+          
+          .info-bolo {
+            padding: 15px;
+          }
+          
+          h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          .preco {
+            font-weight: bold;
+            color: #333;
+            float: right;
+          }
+
+          .quantidade-input {
+            margin-top: 10px; /* Empurra o input para o final do card */
+            margin-right: 10px; /* Espaço entre o input e o botão */
+            align-self: flex-end; /* Alinha os inputs no canto inferior direito */
+        }
+.espacamento-topo{
+    margin-top: 5%;
+}

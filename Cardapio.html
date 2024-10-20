@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlK7QG1hGkzMb5vj76h4b/yfNvH+8lN6rn1AQMy9xE4CZp6MNDl6Upp2Hg5" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGPrKx0rZlAKmNKTIBT/bh7XDwH6fL6peH6On9gC7vyyFefs1pa2mN5lgk+" crossorigin="anonymous"></script>
+    <title>Nuvem de Sabor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="custom-navbar" style="background-color: aliceblue;">
+        <div class="container-fluid mx-auto"> <!-- Utiliza a classe mx-auto para centralizar o conteúdo -->
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Cardapio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sobrenos.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="bolos">
+        <div class="card-bolo">            
+            <img src="imagens/bolo6.png" alt="Bolo de Chocolate" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo de Chocolate</h2>
+                <p>Descrição do bolo de chocolate, com recheio de brigadeiro e cobertura de ganache.</p>                
+                <span class="preco">R$ 50,00</span>              
+            </div>                   
+            <label for="bolo1" class="radio-container"><div class="radio-custom" style="margin-top: -10px;"></div></label>
+            <input type="number" id="quantidade-bolo1" name="quantidade-bolo1" class="quantidade-input" value="0" min="0"style="margin-top: -2px;"> 
+            <input type="radio" id="bolo1" name="bolo" class="radio-input">
+        </div>
+        </div>
+    
+        <div class="card-bolo">            
+            <img src="imagens/bolo1.png" alt="Bolo de Fubá" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo de Fubá</h2>
+                <p>Descrição do bolo de fubá, com calda de goiabada e queijo coalho ralado.</p>
+                <span class="preco">R$ 45,00</span>
+            </div>
+            <label for="bolo1" class="radio-container"><div class="radio-custom" style="margin-top: 10px;"></div></label>
+            <input type="number" id="quantidade-bolo1" name="quantidade-bolo1" class="quantidade-input" value="0" min="0"style="margin-top: 22px;"> 
+            <input type="radio" id="bolo1" name="bolo" class="radio-input">
+        </div>
+    
+        <div class="card-bolo">        
+            <img src="imagens/bolo2.png" alt="Bolo Redondo" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo Redondo</h2>
+                <p>Descrição do bolo redondo, com massa de baunilha e recheio de frutas.</p>
+                <span class="preco">R$ 60,00</span>
+            </div>
+            <label for="bolo1" class="radio-container"><div class="radio-custom"></div></label>
+            <input type="number" id="quantidade-bolo1" name="quantidade-bolo1" class="quantidade-input" value="0" min="0"style="margin-top: 22px;"> 
+            <input type="radio" id="bolo1" name="bolo" class="radio-input">
+        </div>
+    
+        <div class="card-bolo">      
+            <img src="imagens/bolo3.png" alt="Bolo de Chocolate" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo de Chocolate</h2>
+                <p>Descrição do bolo de chocolate, com recheio de brigadeiro e cobertura de ganache.</p>
+                <span class="preco">R$ 50,00</span>
+            </div>
+            <label for="bolo1" class="radio-container"><div class="radio-custom"></div></label>
+            <input type="number" id="quantidade-bolo1" name="quantidade-bolo1" class="quantidade-input" value="0" min="0"> 
+            <input type="radio" id="bolo1" name="bolo" class="radio-input">
+        </div>
+    
+        <div class="card-bolo">            
+            <img src="imagens/bolo4.png" alt="Bolo de Fubá" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo de Fubá</h2>
+                <p>Descrição do bolo de fubá, com calda de goiabada e queijo coalho ralado.</p>
+                <span class="preco">R$ 45,00</span>
+            </div>
+            <label for="bolo1" class="radio-container"><div class="radio-custom"></div></label>
+            <input type="number" id="quantidade-bolo1" name="quantidade-bolo1" class="quantidade-input" value="0" min="0"style="margin-top: 33px;"> 
+            <input type="radio" id="bolo1" name="bolo" class="radio-input">
+        </div>
+    
+        <div class="card-bolo">         
+            <img src="imagens/bolo5.png" alt="Bolo Redondo" class="img-bolo">
+            <div class="info-bolo">
+                <h2>Bolo Redondo</h2>
+                <p>Descrição do bolo redondo, com massa de baunilha e recheio de frutas.</p>
+                <span class="preco">R$ 60,00</span>
+            </div>
+            <input type="number" id="quantidade-bolo2" name="quantidade-bolo2" class="quantidade-input" value="0" min="0" style="margin-top: 33px;">
+            <input type="radio" id="bolo5" name="bolo" class="radio-input">            
+            <label for="bolo5" class="radio-container"><div class="radio-custom"></div></label>
+        </div>                
+    </section>
+    <div class="d-flex justify-content-center">
+        <button id="adicionar-ao-carrinho" class="btn btn-primary">ADICIONAR AO CARRINHO</button>
+    </div>
+</body>
+
+<script>
+    // Espera até que o DOM esteja completamente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        var botaoAdicionarAoCarrinho = document.getElementById('adicionar-ao-carrinho');
+        botaoAdicionarAoCarrinho.addEventListener('click', function() {
+            // Redireciona para a página comprar.html
+            window.location.href = 'comprar.html';
+        });
+    });
+    </script>
+<script src="Script.js"></script>
+</html>
